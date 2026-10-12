@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Details - Student Management</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top shadow-sm">
+    <div class="container">
+        <a class="navbar-brand fw-bold" th:href="@{/dashboard}">
+            <i class="bi bi-mortarboard-fill me-2"></i>Student Management
+        </a>
+        <div class="ms-auto d-flex align-items-center">
+            <a th:href="@{/dashboard}" class="btn btn-outline-light btn-sm me-2">
+                <i class="bi bi-arrow-left me-1"></i> Back to Dashboard
+            </a>
+        </div>
+    </div>
+</nav>
+
+<div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-lg-7">
+
+            <div class="card shadow-sm border-0">
+                <div class="card-header bg-white py-3 border-bottom d-flex justify-content-between align-items-center">
+                    <h4 class="mb-0 fw-bold text-primary">Student Profile</h4>
+                    <span class="badge bg-primary px-3 py-2" th:text="${student.studentCode}">CODE</span>
+                </div>
+                <div class="card-body p-4">
+                    <div class="text-center mb-4">
+                        <div class="display-3 text-secondary mb-2">
+                            <i class="bi bi-person-bounding-box"></i>
+                        </div>
+                        <h3 class="fw-bold mb-0" th:text="${student.fullName}">Student Name</h3>
+                        <p class="text-muted" th:text="${student.department}">Department</p>
+                    </div>
+
+                    <ul class="list-group list-group-flush border rounded mb-4">
+                        <li class="list-group-item d-flex justify-content-between align-items-center py-3">
+                            <span class="text-muted fw-semibold"><i class="bi bi-hash me-2 text-primary"></i>Roll Number / Student ID</span>
+                            <span class="fw-bold" th:text="${student.studentCode}">CODE</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center py-3">
+                            <span class="text-muted fw-semibold"><i class="bi bi-envelope me-2 text-primary"></i>Email Address</span>
+                            <span class="fw-bold" th:text="${student.email}">email@college.edu</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center py-3">
+                            <span class="text-muted fw-semibold"><i class="bi bi-building me-2 text-primary"></i>Department</span>
+                            <span class="fw-bold" th:text="${student.department}">Dept</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center py-3">
+                            <span class="text-muted fw-semibold"><i class="bi bi-calendar-event me-2 text-primary"></i>Academic Year</span>
+                            <span class="fw-bold" th:text="${student.academicYear}">Year</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center py-3">
+                            <span class="text-muted fw-semibold"><i class="bi bi-telephone me-2 text-primary"></i>Contact Number</span>
+                            <span class="fw-bold" th:text="${student.contactNumber != null and !student.contactNumber.isEmpty() ? student.contactNumber : 'Not Provided'}">Phone</span>
+                        </li>
+                    </ul>
+
+                    <div class="d-flex justify-content-between align-items-center">
+                        <a th:href="@{/dashboard}" class="btn btn-outline-secondary">
+                            <i class="bi bi-arrow-left me-1"></i> Dashboard
+                        </a>
+                        <div class="d-flex gap-2">
+                            <a th:href="@{/students/edit/{id}(id=${student.id})}" class="btn btn-primary">
+                                <i class="bi bi-pencil me-1"></i> Edit
+                            </a>
+                            <a th:href="@{/students/delete/{id}(id=${student.id})}"
+                               class="btn btn-outline-danger"
+                               onclick="return confirm('Are you sure you want to delete this student record?');">
+                                <i class="bi bi-trash me-1"></i> Delete
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
