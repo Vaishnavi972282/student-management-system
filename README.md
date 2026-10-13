@@ -37,7 +37,7 @@ A full-stack, enterprise-grade Java web application built using **Spring Boot 3*
 
 ### 1. Build and Run via Maven
 ```powershell
-cd D:\devops\student-management
+cd student-management-system
 mvn clean package
 java -jar target/student-management-1.0.0.jar
 ```

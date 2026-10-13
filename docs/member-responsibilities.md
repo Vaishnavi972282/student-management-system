@@ -12,9 +12,9 @@
 - Ensure all 10 experiments connect together into ONE working software deliverable.
 
 ### 2. Deliverables Produced & Verified
-- **Requirements Specification**: [docs/architecture.md](file:///D:/devops/student-management/docs/architecture.md#L1-L45)
-- **Task Allocation Matrix**: [README.md](file:///D:/devops/student-management/README.md#L7-L23)
-- **Demonstration Checklist**: [docs/demonstration-checklist.md](file:///D:/devops/student-management/docs/demonstration-checklist.md)
+- **Requirements Specification**: [docs/architecture.md](file:///docs/architecture.md#L1-L45)
+- **Task Allocation Matrix**: [README.md](file:///README.md#L7-L23)
+- **Demonstration Checklist**: [docs/demonstration-checklist.md](file:///docs/demonstration-checklist.md)
 
 ### 3. Architecture & Data Flow Diagram
 ```
@@ -66,10 +66,10 @@
 - Handle logout and session cleanup.
 
 ### 2. Deliverables Produced & Verified
-- **Spring Security Configuration**: [`SecurityConfig.java`](file:///D:/devops/student-management/src/main/java/com/devops/studentmanagement/config/SecurityConfig.java)
-- **Authentication Service**: [`UserService.java`](file:///D:/devops/student-management/src/main/java/com/devops/studentmanagement/service/UserService.java#L44-L54)
-- **Login Web Interface**: [`login.html`](file:///D:/devops/student-management/src/main/resources/templates/login.html)
-- **Automated Tests**: [`StudentManagementApplicationTests.java`](file:///D:/devops/student-management/src/test/java/com/devops/studentmanagement/StudentManagementApplicationTests.java#L31-L71) (`TC-SEC-01`, `TC-SEC-02`, `TC-SEC-03`, `TC-SEC-04`)
+- **Spring Security Configuration**: [`SecurityConfig.java`](file:///src/main/java/com/devops/studentmanagement/config/SecurityConfig.java)
+- **Authentication Service**: [`UserService.java`](file:///src/main/java/com/devops/studentmanagement/service/UserService.java#L44-L54)
+- **Login Web Interface**: [`login.html`](file:///src/main/resources/templates/login.html)
+- **Automated Tests**: [`StudentManagementApplicationTests.java`](file:///src/test/java/com/devops/studentmanagement/StudentManagementApplicationTests.java#L31-L71) (`TC-SEC-01`, `TC-SEC-02`, `TC-SEC-03`, `TC-SEC-04`)
 
 ### 3. Faculty Viva Questions & Answers
 - **Q1: How are passwords secured in your application?**  
@@ -88,10 +88,10 @@
 - Encrypt passwords before persisting new users into the database.
 
 ### 2. Deliverables Produced & Verified
-- **Data Transfer Object**: [`UserRegistrationDto.java`](file:///D:/devops/student-management/src/main/java/com/devops/studentmanagement/dto/UserRegistrationDto.java)
-- **Registration Controller Endpoint**: [`AuthController.java`](file:///D:/devops/student-management/src/main/java/com/devops/studentmanagement/controller/AuthController.java#L34-L55)
-- **Registration Web View**: [`register.html`](file:///D:/devops/student-management/src/main/resources/templates/register.html)
-- **Automated Registration Tests**: [`StudentManagementApplicationTests.java`](file:///D:/devops/student-management/src/test/java/com/devops/studentmanagement/StudentManagementApplicationTests.java#L76-L95) (`TC-REG-01`, `TC-REG-02`)
+- **Data Transfer Object**: [`UserRegistrationDto.java`](file:///src/main/java/com/devops/studentmanagement/dto/UserRegistrationDto.java)
+- **Registration Controller Endpoint**: [`AuthController.java`](file:///src/main/java/com/devops/studentmanagement/controller/AuthController.java#L34-L55)
+- **Registration Web View**: [`register.html`](file:///src/main/resources/templates/register.html)
+- **Automated Registration Tests**: [`StudentManagementApplicationTests.java`](file:///src/test/java/com/devops/studentmanagement/StudentManagementApplicationTests.java#L76-L95) (`TC-REG-01`, `TC-REG-02`)
 
 ### 3. Faculty Viva Questions & Answers
 - **Q1: How do you prevent duplicate registrations with the same email?**  
@@ -110,12 +110,12 @@
 - Display instant feedback using Thymeleaf flash messages.
 
 ### 2. Deliverables Produced & Verified
-- **Student Entity**: [`Student.java`](file:///D:/devops/student-management/src/main/java/com/devops/studentmanagement/entity/Student.java)
-- **Repository Interface**: [`StudentRepository.java`](file:///D:/devops/student-management/src/main/java/com/devops/studentmanagement/repository/StudentRepository.java)
-- **Business Logic Service**: [`StudentService.java`](file:///D:/devops/student-management/src/main/java/com/devops/studentmanagement/service/StudentService.java)
-- **Web Controller**: [`StudentController.java`](file:///D:/devops/student-management/src/main/java/com/devops/studentmanagement/controller/StudentController.java)
-- **User Views**: [`dashboard.html`](file:///D:/devops/student-management/src/main/resources/templates/dashboard.html), [`student-form.html`](file:///D:/devops/student-management/src/main/resources/templates/student-form.html), [`student-view.html`](file:///D:/devops/student-management/src/main/resources/templates/student-view.html)
-- **Automated Tests**: [`StudentManagementApplicationTests.java`](file:///D:/devops/student-management/src/test/java/com/devops/studentmanagement/StudentManagementApplicationTests.java#L100-L144) (`TC-CRUD-01`, `TC-CRUD-02`, `TC-CRUD-03`)
+- **Student Entity**: [`Student.java`](file:///src/main/java/com/devops/studentmanagement/entity/Student.java)
+- **Repository Interface**: [`StudentRepository.java`](file:///src/main/java/com/devops/studentmanagement/repository/StudentRepository.java)
+- **Business Logic Service**: [`StudentService.java`](file:///src/main/java/com/devops/studentmanagement/service/StudentService.java)
+- **Web Controller**: [`StudentController.java`](file:///src/main/java/com/devops/studentmanagement/controller/StudentController.java)
+- **User Views**: [`dashboard.html`](file:///src/main/resources/templates/dashboard.html), [`student-form.html`](file:///src/main/resources/templates/student-form.html), [`student-view.html`](file:///src/main/resources/templates/student-view.html)
+- **Automated Tests**: [`StudentManagementApplicationTests.java`](file:///src/test/java/com/devops/studentmanagement/StudentManagementApplicationTests.java#L100-L144) (`TC-CRUD-01`, `TC-CRUD-02`, `TC-CRUD-03`)
 
 ### 3. Faculty Viva Questions & Answers
 - **Q1: How does your update logic avoid duplicate key errors if the user doesn't modify their roll number?**  
@@ -134,8 +134,8 @@
 - Document the verification matrix in `docs/testing.md`.
 
 ### 2. Deliverables Produced & Verified
-- **Automated Test Suite**: [`StudentManagementApplicationTests.java`](file:///D:/devops/student-management/src/test/java/com/devops/studentmanagement/StudentManagementApplicationTests.java)
-- **Test Execution Report**: [`docs/testing.md`](file:///D:/devops/student-management/docs/testing.md)
+- **Automated Test Suite**: [`StudentManagementApplicationTests.java`](file:///src/test/java/com/devops/studentmanagement/StudentManagementApplicationTests.java)
+- **Test Execution Report**: [`docs/testing.md`](file:///docs/testing.md)
 - **Actual Build Execution Evidence**:
   ```
   Tests run: 10, Failures: 0, Errors: 0, Skipped: 0
@@ -180,7 +180,7 @@
 - **Q2: How do you push these branches to GitHub?**  
   *Answer:* By running:
   ```powershell
-  git remote add origin https://github.com/<user>/student-management.git
+  git remote add origin https://github.com/Vaishnavi972282/student-management-system.git
   git push -u origin main
   git push origin develop --all
   git push --tags
@@ -196,9 +196,9 @@
 - Ensure the pipeline fails if compilation or tests fail, and archive artifacts upon success.
 
 ### 2. Deliverables Produced & Verified
-- **Build Descriptor**: [`pom.xml`](file:///D:/devops/student-management/pom.xml)
+- **Build Descriptor**: [`pom.xml`](file:///pom.xml)
 - **Built Artifact**: `target/student-management-1.0.0.jar` (65 MB)
-- **Pipeline Script**: [`Jenkinsfile`](file:///D:/devops/student-management/Jenkinsfile) with 7 declarative stages:
+- **Pipeline Script**: [`Jenkinsfile`](file:///Jenkinsfile) with 7 declarative stages:
   1. *Checkout*
   2. *Validate Environment*
   3. *Compile*
@@ -218,14 +218,14 @@
 ## 🐳 MEMBER 8 — Docker Engineer
 
 ### 1. Responsibilities
-- Create a production-ready, multi-stage [`Dockerfile`](file:///D:/devops/student-management/Dockerfile) with a non-root user.
+- Create a production-ready, multi-stage [`Dockerfile`](file:///Dockerfile) with a non-root user.
 - Build container image `student-management:local`.
-- Create [`compose.yaml`](file:///D:/devops/student-management/compose.yaml) to orchestrate both the application container and the MySQL 8.4 database.
+- Create [`compose.yaml`](file:///compose.yaml) to orchestrate both the application container and the MySQL 8.4 database.
 
 ### 2. Deliverables Produced & Verified
-- **Multi-Stage Dockerfile**: [`Dockerfile`](file:///D:/devops/student-management/Dockerfile)
-- **Docker Ignore File**: [`.dockerignore`](file:///D:/devops/student-management/.dockerignore)
-- **Docker Compose Spec**: [`compose.yaml`](file:///D:/devops/student-management/compose.yaml)
+- **Multi-Stage Dockerfile**: [`Dockerfile`](file:///Dockerfile)
+- **Docker Ignore File**: [`.dockerignore`](file:///.dockerignore)
+- **Docker Compose Spec**: [`compose.yaml`](file:///compose.yaml)
 
 ### 3. Faculty Viva Questions & Answers
 - **Q1: Why did you use a multi-stage Docker build?**  
@@ -244,8 +244,8 @@
 - Create a NodePort Service to make the application accessible.
 
 ### 2. Deliverables Produced & Verified
-- **Deployment Manifest**: [`k8s/deployment.yaml`](file:///D:/devops/student-management/k8s/deployment.yaml) (Replicas: 2, Resource requests/limits, Health probes)
-- **Service Manifest**: [`k8s/service.yaml`](file:///D:/devops/student-management/k8s/service.yaml) (Type: `NodePort`, NodePort: `30080`, Port: `8080`)
+- **Deployment Manifest**: [`k8s/deployment.yaml`](file:///k8s/deployment.yaml) (Replicas: 2, Resource requests/limits, Health probes)
+- **Service Manifest**: [`k8s/service.yaml`](file:///k8s/service.yaml) (Type: `NodePort`, NodePort: `30080`, Port: `8080`)
 
 ### 3. Faculty Viva Questions & Answers
 - **Q1: What is the difference between a Liveness Probe and a Readiness Probe?**  
@@ -268,7 +268,7 @@
 - Assemble end-to-end integration evidence and faculty viva preparation documentation.
 
 ### 2. Deliverables Produced & Verified
-- **Monitoring Configuration**: [`application.properties`](file:///D:/devops/student-management/src/main/resources/application.properties#L32-L37)
+- **Monitoring Configuration**: [`application.properties`](file:///src/main/resources/application.properties#L32-L37)
 - **Live Health Endpoint Verified**:
   ```json
   {
@@ -280,7 +280,7 @@
     }
   }
   ```
-- **Project Dossier**: [`docs/member-responsibilities.md`](file:///D:/devops/student-management/docs/member-responsibilities.md) & [`docs/demonstration-checklist.md`](file:///D:/devops/student-management/docs/demonstration-checklist.md)
+- **Project Dossier**: [`docs/member-responsibilities.md`](file:///docs/member-responsibilities.md) & [`docs/demonstration-checklist.md`](file:///docs/demonstration-checklist.md)
 
 ### 3. Faculty Viva Questions & Answers
 - **Q1: How do you verify the application's health without logging into the UI?**  

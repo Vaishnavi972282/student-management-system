@@ -10,7 +10,7 @@ Use this checklist during your college project presentation to demonstrate every
 ### Step 1: Start Application
 Run:
 ```powershell
-cd D:\devops\student-management
+cd student-management-system
 java -jar target\student-management-1.0.0.jar
 ```
 Show startup logs in terminal indicating:

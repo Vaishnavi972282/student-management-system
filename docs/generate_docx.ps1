@@ -1,4 +1,4 @@
-$outputDocx = "D:\devops\student-management\docs\Test_Cases_Report_Student_Management.docx"
+$outputDocx = Join-Path $PSScriptRoot "Test_Cases_Report_Student_Management.docx"
 $tempDir = Join-Path $env:TEMP "docx_build_$(Get-Random)"
 New-Item -ItemType Directory -Path $tempDir -Force | Out-Null
 New-Item -ItemType Directory -Path "$tempDir\_rels" -Force | Out-Null
